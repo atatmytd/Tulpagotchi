@@ -5,20 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tulpagotchi"
         mc:Ignorable="d"
-        Title="Tulpagotchi" Height="600" Width="800">
+        Title="Tulpagotchi" Height="826.914" Width="873.782">
     <Grid>
-        <DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.ColumnSpan="2" >
             <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New Player"/>
-                    <MenuItem Header="_Open Player"/>
+                    <MenuItem Name="Menu_New" Header="_New Player" MenuItem.Click="Menu_New_Click"/>
+                    <MenuItem Name="Menu_Open" Header="_Open Player" MenuItem.Click="Menu_Open_Click"/>
                     <Separator/>
-                    <MenuItem Header="_Save"/>
-                    <MenuItem Header="Save _As"/>
+                    <MenuItem Name="Menu_Save" Header="_Save" MenuItem.Click="Menu_Save_Click"/>
+                    <MenuItem Name="Menu_SaveAs" Header="Save _As" MenuItem.Click="Menu_SaveAs_Click"/>
                     <Separator/>
-                    <MenuItem Header="E_xit"/>
+                    <MenuItem Name="Menu_Exit" Header="E_xit" MenuItem.Click="Menu_Exit_Click"/>
                 </MenuItem>
+                <MenuItem Name="Menu_Preferences" Header="_Preferences" MenuItem.Click="Menu_Preferences_Click"/>
             </Menu>
         </DockPanel>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Dashboard">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Content="Status" FontSize="30" FontWeight="ExtraBlack" />
+                    <DockPanel LastChildFill="False" VerticalAlignment="Center" Margin="15, 45, 15, 15">
+                        <Label Content="Level 1" DockPanel.Dock="Top" Width="100" HorizontalAlignment="Left"/>
+                        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+                            <Label Content="333/777" DockPanel.Dock="Left" Width="100"/>
+                            <ProgressBar Maximum="777" Value="333" Margin="15 0" />
+                        </DockPanel>
+                        <Label Content="67% of Pets Found" DockPanel.Dock="Top" />
+                        <Label Content="24% of Pets Tamed" DockPanel.Dock="Top" />
+                    </DockPanel>
+                    <DockPanel Grid.Column="1" LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="15, 45, 15, 15">
+                        <Label Content="Most Words: 300" Width="100" DockPanel.Dock="Top" />
+                        <Label Content="Longest Session: 30 minutes" Width="100" DockPanel.Dock="Top" />
+                        <Label Content="Current Streak: 2" Width="100" DockPanel.Dock="Top" />
+                        <Label Content="Longest Streak: 14" Width="100" DockPanel.Dock="Top" />
+                    </DockPanel>
+
+                    <Label Content="Recent Pets" FontSize="30" Grid.Row="1" FontWeight="ExtraBlack" />
+                    <DockPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="15, 45, 125, 15" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="images/orange.png" Margin="20" MaxHeight="125" />
+                        <Image Source="images/orange.png" Margin="20" MaxHeight="125"/>
+                        <Image Source="images/orange.png" Margin="20" MaxHeight="125"/>
+                        <Image Source="images/orange.png" Margin="20" MaxHeight="125"/>
+                        <Image Source="images/orange.png" Margin="20" MaxHeight="125"/>
+                    </DockPanel>
+                    <Label Content="See full collection" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Right" Margin="0 0 15 0"/>
+
+                    <Label Content="Reports" FontSize="30" Grid.Row="2" FontWeight="ExtraBlack" />
+                    <DockPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 45, 125, 15" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="images/mask.png" MaxHeight="150" Margin="20" />
+                        <Image Source="images/mask.png" MaxHeight="150" Margin="20"  />
+                        <Image Source="images/mask.png" MaxHeight="150" Margin="20"  />
+                    </DockPanel>
+                    <Label Content="More Reports" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Right" Margin="0 0 15 0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Battle"></TabItem>
+            <TabItem Header="Collection"></TabItem>
+            <TabItem Header="Reports"></TabItem>
+        </TabControl>
     </Grid>
 </Window>
