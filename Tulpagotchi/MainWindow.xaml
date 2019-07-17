@@ -12,6 +12,11 @@
                 <MenuItem Header="_File">
                     <MenuItem Header="_New Player"/>
                     <MenuItem Header="_Open Player"/>
+                    <Separator/>
+                    <MenuItem Header="_Save"/>
+                    <MenuItem Header="Save _As"/>
+                    <Separator/>
+                    <MenuItem Header="E_xit"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
