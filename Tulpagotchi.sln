@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tulpagotchi", "Tulpagotchi\Tulpagotchi.csproj", "{C6E892A3-71E9-4A5B-A9CD-D28AF5382434}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E892A3-71E9-4A5B-A9CD-D28AF5382434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E892A3-71E9-4A5B-A9CD-D28AF5382434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E892A3-71E9-4A5B-A9CD-D28AF5382434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E892A3-71E9-4A5B-A9CD-D28AF5382434}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D33EA83-5A36-4364-9440-AC5F3336DA7C}
+	EndGlobalSection
+EndGlobal
