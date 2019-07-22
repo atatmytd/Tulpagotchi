@@ -22,7 +22,8 @@ namespace Tulpagotchi
         }
         public string fileLocation;
 
-        public static Player LoadPlayer(string fileLocation) // TO DO
+        /*PLAYER MANAGEMENT*/
+        public static Player LoadPlayer(string fileLocation)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Player));
             Player p;
@@ -32,8 +33,7 @@ namespace Tulpagotchi
             }
             return p;
         }
-
-        public void SaveAs(string filePath) // TO DO
+        public void SaveAs(string filePath)
         {
             fileLocation = filePath;
             XmlSerializer serializer = new XmlSerializer(typeof(Player));
@@ -43,8 +43,7 @@ namespace Tulpagotchi
                 serializer.Serialize(sw, this);
             }
         }
-
-        public void SaveFile() // TO DO
+        public void SaveFile()
         {            
             XmlSerializer serializer = new XmlSerializer(typeof(Player));
 

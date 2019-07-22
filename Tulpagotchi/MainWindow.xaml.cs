@@ -30,18 +30,15 @@ namespace Tulpagotchi
                 {
                     string configVal = Utilities.GetConfigValue("SavedUser");
                     player = Player.LoadPlayer(configVal);
-                    //TestLabel.Content = "I loaded the saved player from " + player.fileLocation;
                 }
                 catch {
                     player = new Player();
                     Utilities.SetConfigValue("SavedUser", "");
-                    //TestLabel.Content = "There was an error so I loaded a new player";
                 }
             }
             else
             {
                 player = new Player();
-                //TestLabel.Content = "There was no new player to load";
             }
             
         }
@@ -53,5 +50,38 @@ namespace Tulpagotchi
             else return true;
         }
 
+        private void FightButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoadBattlePage();
+        }
+        private void LoadBattlePage()
+        {
+            BattleOptions.Visibility = Visibility.Collapsed;
+            FightButton.Visibility = Visibility.Collapsed;
+
+            BattleWords.Visibility = Visibility.Visible;
+            BattleImpage.Visibility = Visibility.Visible;
+            BattleControls.Visibility = Visibility.Visible;
+        }
+
+        private void AbandonBattle_Click(object sender, RoutedEventArgs e)
+        {
+            LoadDashboard();
+        }
+
+        private void EndBattle_Click(object sender, RoutedEventArgs e)
+        {
+            LoadDashboard();
+        }
+
+        private void LoadDashboard()
+        {
+            BattleOptions.Visibility = Visibility.Visible;
+            FightButton.Visibility = Visibility.Visible;
+
+            BattleWords.Visibility = Visibility.Collapsed;
+            BattleImpage.Visibility = Visibility.Collapsed;
+            BattleControls.Visibility = Visibility.Collapsed;
+        }
     }
 }

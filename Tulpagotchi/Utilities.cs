@@ -78,5 +78,12 @@ namespace Tulpagotchi
 
             return filePath;
         }
+        public static int ReturnNextLevelCeiling(int level, int baseLevel) // to do
+        {
+            double exponent = 1.8;
+            double result = baseLevel * (Math.Pow(level, exponent));
+
+            return (int)result;
+        }
     }
 }

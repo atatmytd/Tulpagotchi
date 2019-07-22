@@ -6,6 +6,21 @@
         xmlns:local="clr-namespace:Tulpagotchi"
         mc:Ignorable="d"
         Title="Tulpagotchi" Height="600" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Width" Value="120" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="AliceBlue" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -27,9 +42,55 @@
         </DockPanel>
         <TabControl Grid.Row="1">
             <TabItem Header="Dashboard">
-                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!--No battle controls-->
+                    <DockPanel Name="BattleOptions" Grid.Row="1"  Margin="20 0 0 20" VerticalAlignment="Bottom" >
+                        <RadioButton Name="battleOption_any" Content="Any battle" DockPanel.Dock="Top" IsChecked="True" />
+                        <RadioButton Name="battleOption_mystery" Content="Find an unknown pet" DockPanel.Dock="Top" />
+                        <RadioButton Name="battleOption_baby" Content="Train any baby pet" DockPanel.Dock="Top" />
+                        <RadioButton Name="battleOption_teenage" Content="Lecture any teenage pet" DockPanel.Dock="Top" />
+                    </DockPanel>
+                    <Button Name="FightButton" Content="Let's Write!" Grid.Row="1" Click="FightButton_Click" 
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 20 50"  />
+
+                    <!--Battle Controls-->
+                    <TextBox Name="BattleWords" Grid.Column="1" Grid.RowSpan="2"  Visibility="Collapsed" />
+                    <StackPanel Name="BattleImpage" Grid.RowSpan="2"  Visibility="Collapsed">
+                        <Image Name="BattleEnemyImage" Height="200" Source="images/gen1/Teenager_Basic_Wolf.png" />
+                        <Label Name="BattleInfoLabel" Content="Boss Information" HorizontalAlignment="Center" Margin="0,15,0,0" />
+                        <ProgressBar Name="BattleProgress" Height="50" Margin="15 50 15 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2"
+                                 MaxHeight="100" Value="50" Background="SlateGray">
+                            <ProgressBar.Foreground>
+                                <RadialGradientBrush GradientOrigin="1,0.5" Center="1,0.5" RadiusX="1" RadiusY="1">
+                                    <GradientStop Color="#FF0CFF00" Offset="0"/>
+                                    <GradientStop Color="Black" Offset="1"/>
+                                </RadialGradientBrush>
+                            </ProgressBar.Foreground>
+                        </ProgressBar>
+                        <Label Content="XXX/XXXX words" HorizontalAlignment="Right" Margin="0 0 15 0" />
+                    </StackPanel>
+                    <WrapPanel Name="BattleControls" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"  Visibility="Collapsed">
+                        <Button Name="AbandonBattle" Content="Abandon" Margin="50 10" Click="AbandonBattle_Click" />
+                        <Button Name="EndBattle" Content="End Battle" Click="EndBattle_Click" />
+                    </WrapPanel>
+                </Grid>
             </TabItem>
-            <TabItem Header="Collection"/>
+            <TabItem Header="Collection">
+                <TabControl>
+                    <TabItem Header="Standard Pets" />
+                    <TabItem Header="Milestone Pets" />
+                    <TabItem Header="Boss Pets" />
+                </TabControl>
+            </TabItem>
             <TabItem Header="Milestones - COMING SOON" Visibility="Collapsed"/>
             <TabItem Header="Reports - COMING SOON" Visibility="Collapsed"/>
         </TabControl>
