@@ -10,14 +10,15 @@
         <DockPanel>
             <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New Player"/>
-                    <MenuItem Header="_Open Player"/>
+                    <MenuItem Header="_New Player" Click="MenuItem_New_Click"/>
+                    <MenuItem Header="_Open Player" Click="MenuItem_Open_Click"/>
                     <Separator/>
-                    <MenuItem Header="_Save"/>
-                    <MenuItem Header="Save _As"/>
+                    <MenuItem Header="_Save" Click="MenuItem_Save_Click"/>
+                    <MenuItem Header="Save _As" Click="MenuItem_SaveAs_Click"/>
                     <Separator/>
-                    <MenuItem Header="E_xit"/>
+                    <MenuItem Header="E_xit" Click="MenuItem_Exit_Click"/>
                 </MenuItem>
+                <MenuItem Header="_Preferences" Click="MenuItem_Preferences_Click"/>
             </Menu>
         </DockPanel>
     </Grid>

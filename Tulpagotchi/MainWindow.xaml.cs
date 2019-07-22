@@ -24,5 +24,36 @@ namespace Tulpagotchi
         {
             InitializeComponent();
         }
+
+        private bool UserSaved()
+        {
+            if (Utilities.GetConfigValue("SavedUser") == "") return false;
+            else return true;
+        }
+
+        private void MenuItem_New_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
+        private void MenuItem_Open_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
+        private void MenuItem_Save_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
+        private void MenuItem_SaveAs_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
+        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
+        private void MenuItem_Preferences_Click(object sender, RoutedEventArgs e) // TO DO
+        {
+
+        }
     }
 }
