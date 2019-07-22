@@ -59,10 +59,22 @@ namespace Tulpagotchi
 
             //open up a file dialog
             SaveFileDialog save = new SaveFileDialog();
-            save.Filter = string.Format("{1} ({0})|*{0}", fileExt, fileExtName);
+            save.Filter = string.Format("{1} (*.{0})|*.{0}", fileExt, fileExtName);
             save.FileName = string.Format("{0}", defaultFileName);
             if (save.ShowDialog() == true)
                 filePath = save.FileName;
+
+            return filePath;
+        }
+        public static string GetFileLocation(string fileExt, string fileExtName )
+        {
+            string filePath = "";
+
+            //open up a file dialog
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = string.Format("{1} (*.{0})|*.{0}", fileExt, fileExtName);
+            if (open.ShowDialog() == true)
+                filePath = open.FileName;
 
             return filePath;
         }

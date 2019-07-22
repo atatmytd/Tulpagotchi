@@ -1,0 +1,15 @@
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\bin\Debug\Tulpagotchi.exe.config
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\bin\Debug\Tulpagotchi.exe
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\bin\Debug\Tulpagotchi.pdb
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.csprojResolveAssemblyReference.cache
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\MainWindow.g.cs
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\App.g.cs
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi_MarkupCompile.cache
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi_MarkupCompile.lref
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\MainWindow.baml
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.g.resources
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.Properties.Resources.resources
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.csproj.GenerateResource.Cache
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.csproj.CoreCompileInputs.cache
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.exe
+C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\Tulpagotchi.pdb

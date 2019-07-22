@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Tulpagotchi" Height="600" Width="800">
     <Grid>
-        <DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
             <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" DockPanel.Dock="Top">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New Player" Click="MenuItem_New_Click"/>
@@ -21,5 +25,13 @@
                 <MenuItem Header="_Preferences" Click="MenuItem_Preferences_Click"/>
             </Menu>
         </DockPanel>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Dashboard">
+                
+            </TabItem>
+            <TabItem Header="Collection"/>
+            <TabItem Header="Milestones - COMING SOON" Visibility="Collapsed"/>
+            <TabItem Header="Reports - COMING SOON" Visibility="Collapsed"/>
+        </TabControl>
     </Grid>
 </Window>

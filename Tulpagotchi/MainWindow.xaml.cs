@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,28 @@ namespace Tulpagotchi
         public MainWindow()
         {
             InitializeComponent();
+            if(UserSaved())
+            {
+                try
+                {
+                    string configVal = Utilities.GetConfigValue("SavedUser");
+                    player = Player.LoadPlayer(configVal);
+                    //TestLabel.Content = "I loaded the saved player from " + player.fileLocation;
+                }
+                catch {
+                    player = new Player();
+                    Utilities.SetConfigValue("SavedUser", "");
+                    //TestLabel.Content = "There was an error so I loaded a new player";
+                }
+            }
+            else
+            {
+                player = new Player();
+                //TestLabel.Content = "There was no new player to load";
+            }
             
         }
+        Player player;
 
         private bool UserSaved()
         {
@@ -32,29 +53,5 @@ namespace Tulpagotchi
             else return true;
         }
 
-        private void MenuItem_New_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
-        private void MenuItem_Open_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
-        private void MenuItem_Save_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
-        private void MenuItem_SaveAs_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
-        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
-        private void MenuItem_Preferences_Click(object sender, RoutedEventArgs e) // TO DO
-        {
-
-        }
     }
 }
