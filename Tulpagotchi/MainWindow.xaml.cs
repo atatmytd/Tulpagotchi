@@ -23,6 +23,7 @@ namespace Tulpagotchi
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private bool UserSaved()
