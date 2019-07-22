@@ -4,16 +4,21 @@
 winexe
 C#
 .cs
-C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\obj\Debug\
+C:\Users\crank\Source\Repos\atatmytd\Tulpagotchi\Tulpagotchi\obj\Debug\
 Tulpagotchi
 none
 false
 DEBUG;TRACE
-C:\Users\atat\Desktop\source\Tulpagotchi\Tulpagotchi\App.xaml
+C:\Users\crank\Source\Repos\atatmytd\Tulpagotchi\Tulpagotchi\App.xaml
 11151548125
 
+<<<<<<< HEAD
 131077327046
 14-799888181
+=======
+61586167141
+131569487696
+>>>>>>> master
 MainWindow.xaml;
 
 False

@@ -83,5 +83,31 @@ namespace Tulpagotchi
             BattleImpage.Visibility = Visibility.Collapsed;
             BattleControls.Visibility = Visibility.Collapsed;
         }
+
+        //menu Items
+        private void Menu_Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_SaveAs_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_Open_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_New_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_Preferences_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
